@@ -1,0 +1,314 @@
+:root {
+  --paper: #ffffff;
+  --slate: #424769;
+  --ink: #2d3250;
+  --peach: #f9b17a;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 2.25rem;
+  }
+
+  header .col-lg-8,
+  main.col-lg-8 {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  header .col-lg-4,
+  aside.col-lg-4 {
+    flex: 0 0 17rem;
+    max-width: 17rem;
+  }
+}
+
+header {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+header.border-bottom {
+  border-bottom-color: var(--peach);
+}
+
+.logo {
+  flex-shrink: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--peach);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--paper);
+}
+
+.header-search {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.header-search .form-control {
+  padding-left: 2.25rem;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0.75rem center;
+  background-size: 1rem;
+}
+
+.avatar {
+  background-color: var(--peach);
+  object-fit: cover;
+  padding: 1px;
+}
+
+.user-block a {
+  color: var(--peach);
+  text-decoration: none;
+}
+
+.user-block a:hover {
+  color: var(--paper);
+}
+
+header .btn,
+header .btn:hover,
+header .btn:focus {
+  flex-shrink: 0;
+  background-color: var(--peach);
+  border-color: var(--peach);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+header .btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+header .btn:hover,
+header .btn:focus {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(45, 50, 80, 0.28);
+}
+
+.badge {
+  background: var(--slate);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.badge:hover {
+  background: var(--peach);
+  color: var(--ink);
+}
+
+aside .list-unstyled a {
+  color: var(--slate);
+  text-decoration: none;
+}
+
+aside .list-unstyled a:hover {
+  color: var(--peach);
+}
+
+aside .list-unstyled li + li {
+  margin-top: 0.5rem;
+}
+
+.question-body,
+.answer-body,
+.card-body {
+  min-width: 0;
+}
+
+.section-link,
+.question-card a:not(.badge) {
+  color: var(--slate);
+  text-decoration: none;
+}
+
+.section-link:hover,
+.question-card a:not(.badge):hover {
+  color: var(--peach);
+}
+
+.question-card {
+  border-color: var(--slate);
+}
+
+.question-card .card-title a {
+  color: var(--ink);
+}
+
+.question-card .card-title a:hover {
+  color: var(--peach);
+}
+
+.question-card .card-title {
+  overflow-wrap: anywhere;
+}
+
+.votes .vote {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--slate);
+}
+
+.votes .vote:hover,
+.votes .vote:focus,
+.votes .vote.active {
+  background: var(--peach);
+  border-color: var(--peach);
+  color: var(--ink);
+}
+
+.votes .vote-down.active,
+.votes .vote-down.active:hover,
+.votes .vote-down.active:focus {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.votes .vote:focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 177, 122, 0.45);
+}
+
+.pagination .page-link {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--slate);
+}
+
+.pagination .page-link:hover {
+  color: var(--ink);
+  background: var(--peach);
+  border-color: var(--peach);
+}
+
+.pagination .page-item.active .page-link {
+  color: var(--ink);
+  background: var(--peach);
+  border-color: var(--peach);
+}
+
+.pagination .page-item.disabled .page-link {
+  color: var(--slate);
+  background: var(--paper);
+  border-color: var(--slate);
+}
+
+.pagination .page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 177, 122, 0.45);
+}
+
+.answer-card {
+  border-color: var(--slate);
+}
+
+.answer-card-correct {
+  border-color: var(--peach);
+}
+
+.question-body h1,
+.answer-body {
+  overflow-wrap: anywhere;
+}
+
+.correct-answer .form-check-input {
+  border-color: var(--slate);
+}
+
+.correct-answer .form-check-input:checked {
+  background-color: var(--ink);
+  border-color: var(--peach);
+}
+
+.correct-answer .form-check-input:focus {
+  border-color: var(--peach);
+  box-shadow: 0 0 0 0.2rem rgba(249, 177, 122, 0.45);
+}
+
+main .form-error {
+  color: var(--ink);
+  background: var(--peach);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+main form .field-error {
+  color: var(--ink);
+  font-weight: 600;
+  margin: 0.35rem 0 0.25rem;
+}
+
+main form .form-text {
+  color: var(--slate);
+}
+
+main form .form-control {
+  border-color: var(--slate);
+}
+
+main form .form-control:focus,
+main form .form-control.is-invalid,
+main form .form-control.is-invalid:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 0.2rem rgba(249, 177, 122, 0.45);
+}
+
+main form .form-control.is-invalid {
+  background-image: none;
+  padding-right: 0.75rem;
+}
+
+main form .btn,
+main form .btn:hover,
+main form .btn:focus {
+  background: var(--peach);
+  border-color: var(--peach);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+main form a {
+  color: var(--slate);
+  text-decoration: none;
+}
+
+main form a:hover {
+  color: var(--peach);
+}
+
+.profile-avatar {
+  border: 2px solid var(--peach);
+}
+
+@media (max-width: 990px) {
+  .header-search {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  main form .row > [class*="col-"] {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
